@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns! Você Venceu!</title>
+    <!-- Link para o CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Estilos personalizados (opcional) -->
+    <style>
+        body {
+            background-color: #e9f7ef;
+        }
+        .victory-container {
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .victory-title {
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .victory-message {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .btn-custom {
+            padding: 10px 20px;
+            font-size: 1.1em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Conteúdo principal -->
+    <div class="victory-container">
+        <h1 class="victory-title">🎉 Parabéns! Você Venceu! 🎉</h1>
+        <p class="victory-message">
+            Você acertou o número <strong>{{ numero_aleatorio }}</strong> em <strong>{{ tentativas }}</strong> tentativas.
+        </p>
+        <a href="{% url 'iniciar_jogo' %}" class="btn btn-success btn-custom">Jogar Novamente</a>
+    </div>
+
+    <!-- Footer opcional -->
+    <footer>
+        &copy; {{ ano_atual }} Jogo da Adivinhação
+    </footer>
+
+    <!-- Scripts do Bootstrap (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
